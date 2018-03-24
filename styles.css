@@ -1,6 +1,28 @@
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
 h1 {
   display: inline-block;
+  color: #FFFFFF;
+  font-weight: bold 800;
 }
  img {
   display: inline-block;
  }
+
+main {
+  background-color: #455A64;
+}
+
+button {
+  background-color: #FFC107;
+  color: #FFFFFF;
+}
+button:hover {
+  background-color: #FFD773;
+}
+
+.cards {
+  background-color: #CFD8DC;
+}
