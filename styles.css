@@ -5,11 +5,32 @@
 h1 {
   display: inline-block;
   color: #FFFFFF;
-  font-weight: bold 800;
+  font-weight: 800;
 }
+
+h2 {
+  margin-top: 0;
+}
+.linked {
+  margin-left: 25%;
+}
+
+input {
+  margin-left: 25%;
+  margin-bottom: 20px;
+  width: 40%;
+  height: 20px;
+}
+
  img {
   display: inline-block;
  }
+
+.parent {
+  width: 50%;
+  margin: auto;
+  background-color: #455A64;
+  }
 
 main {
   background-color: #455A64;
