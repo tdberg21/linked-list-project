@@ -29,7 +29,7 @@ a:hover {
   color: #455A64
 }
 
-div {
+li {
   background-color: #FFFFFF;
   border-style: solid;
   border-width: thin;
@@ -117,7 +117,7 @@ section {
   float: right;
 }
 
-.cardContainer  {
+.section2  {
   width: 50%;
   float: right;
   display: inline-block;
