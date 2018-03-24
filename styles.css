@@ -123,3 +123,7 @@ section {
   display: inline-block;
 }
 
+.card-container {
+  list-style-type: none;
+}
+
