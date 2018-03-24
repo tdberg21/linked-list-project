@@ -84,7 +84,7 @@ section {
   margin-left: 23%;
 }
 
-.yellowButton {
+.yellow-button {
   background-color: #FFC107;
   color: #FFFFFF;
   margin-left: 25%;
@@ -94,7 +94,7 @@ section {
   border: 0;
 }
 
-.yellowButton:hover {
+.yellow-button:hover {
   background-color: #FFD773;
 }
 
@@ -113,7 +113,7 @@ section {
 }
 
 
-.delete {
+.delete-button {
   float: right;
 }
 
