@@ -19,10 +19,13 @@ button {
   background-color: #FFC107;
   color: #FFFFFF;
 }
+
 button:hover {
   background-color: #FFD773;
 }
 
-.cards {
+section {
   background-color: #CFD8DC;
 }
+
+
