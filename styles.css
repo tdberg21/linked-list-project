@@ -1,0 +1,125 @@
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  display: inline-block;
+  color: #FFFFFF;
+  font-weight: 800;
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin-top: 10px;
+  margin-bottom: 0;
+  margin-left: 20px;
+  color: #455A64;
+}
+
+a {
+  color: #607D8B;
+  margin-left: 20px;
+  text-decoration-color: #F2F4F4;
+}
+
+a:hover {
+  font-weight: 800;
+  text-decoration-color: #FFC107;
+  color: #455A64
+}
+
+div {
+  background-color: #FFFFFF;
+  border-style: solid;
+  border-width: thin;
+  border-color: #607D8B;
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+input {
+  margin-left: 25%;
+  margin-bottom: 20px;
+  width: 40%;
+  height: 20px;
+  font-size: 18px;
+}
+
+ img {
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+  margin-left: 5px;
+  margin-right: 5px;
+ }
+
+main {
+  background-color: #455A64;
+}
+
+hr {
+  width: 93%;
+  border-color: #CFD8DC;
+  margin-bottom: 5px;
+}
+
+section {
+  background-color: #CFD8DC;
+  height: 500px;
+}
+
+.parent {
+  width: 50%;
+  height: 500px;
+  margin: auto;
+  background-color: #455A64;
+  display: inline-block;
+  float: left;
+}
+
+.linked {
+  margin-left: 23%;
+}
+
+.yellowButton {
+  background-color: #FFC107;
+  color: #FFFFFF;
+  margin-left: 25%;
+  margin-bottom: 25px;
+  width: 41%;
+  font-weight: 800;
+  border: 0;
+}
+
+.yellowButton:hover {
+  background-color: #FFD773;
+}
+
+.readDeleteButtons {
+  border: 0;
+  color: #455A64;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-bottom: 5px;
+}
+
+.readDeleteButtons:hover {
+  font-weight: 800;
+  text-decoration-color: #FFC107;
+  color: #455A64
+}
+
+
+.delete {
+  float: right;
+}
+
+.cardContainer  {
+  width: 50%;
+  float: right;
+  display: inline-block;
+}
+
