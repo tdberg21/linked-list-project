@@ -1,35 +1,63 @@
-console.log('testing')
 
-var websiteTitle = document.querySelector('.website-title');
-var websiteUrl = document.querySelector('.website-url');
-var enterButton = document.querySelector('.yellow-button');
-var readButton = document.querySelector('.read-button');
-var deleteButton = document.querySelector('.delete-button');
-var cardContainer = document.querySelector('.cardContainer');
+var $websiteTitle = $('.website-title');
+var $websiteUrl = $('.website-url');
+var $enterButton = $('.yellow-button');
+var $readButton = $('.read-button');
+var $deleteButton = $('.delete-button');
+var $cardContainer = $('.cardContainer');
 
-console.log(typeof websiteTitle.value);
+enableButton();
 
-enterButton.addEventListener('click', appendCard);
-readButton.addEventListener('click', markAsRead);
-deleteButton.addEventListener('click', deleteLink);
-websiteTitle.addEventListener('keyup', enableButton);
-websiteUrl.addEventListener('keyup', enableButton);
 
-function markAsRead() {
-  console.log('click');
-  event.preventDefault(markAsRead);
+$enterButton.on('click', getInfo);
+$readButton.on('click', markAsRead);
+$deleteButton.on('click', deleteLink);
+$websiteTitle.on('keyup', enableButton);
+$websiteUrl.on('keyup', enableButton);
+
+
+function getInfo(event) {
+  event.preventDefault();
+  isValidUrl($websiteUrl.val())
+
+}
+
+function prependCard(event) {
+  $('ul').prepend(`
+    <li class="cards">
+      <h2>${$websiteTitle.val()}</h2>
+      <hr>
+      <a href="">${$websiteUrl.val()}</a>
+      <hr>
+      <button class="readDeleteButtons read-button">Read</button>
+      <button class="readDeleteButtons delete-button">Delete</button>
+    </li>`);
 };
 
-function deleteLink() {
+function markAsRead(event) {
   console.log('click');
-  event.preventDefault(deleteLink);
+  event.preventDefault();
 };
+
+function deleteLink(event) {
+  console.log('click');
+  event.preventDefault();
+};
+
 
 function enableButton() {
-  if (websiteTitle.value === '' || websiteUrl.value === '') {
-    enterButton.disabled = true;
+  if ($websiteTitle.val() && $websiteUrl.val()) {
+    $enterButton.prop('disabled', false);
   } else {
-    enterButton.disabled = false;
-  };
+    $enterButton.prop('disabled', true);
+  }
+}
+
+function isValidUrl(url) {
+  if (/(www\.)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/.test(url) === false) {
+  alert('please enter valid url')
+  } else {
+    prependCard();
+  }
 };
 
