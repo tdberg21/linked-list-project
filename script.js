@@ -4,15 +4,24 @@ var $enterButton = $('.yellow-button');
 var $readButton = $('.read-button');
 var $deleteButton = $('.delete-button');
 var $cardContainer = $('.cardContainer');
-var $handleClick = function() {
-  console.log( 'something was clicked' );
-};
 
 $enterButton.on('click', getInfo);
-$readButton.on('click', read);
 $deleteButton.on('click', deleteLink);
 // $websiteTitle.on('keyup', enableButton);
 // $websiteUrl.on('keyup', enableButton);
+
+
+
+$('ul').on('click', 'li .read-button', function() {
+  console.log(this);
+  $(this).toggleClass('read');
+  $(this).closest('li').toggleClass('read-background');
+});
+
+// $('ul').on('click', 'li .delete-button', function() {
+  
+// })
+
 
 function getInfo(event) {
   event.preventDefault();
@@ -29,12 +38,6 @@ function prependCard(event) {
       <button class="readDeleteButtons read-button">Read</button>
       <button class="readDeleteButtons delete-button">Delete</button>
     </li>`);
-};
-
-function read(event) {
-  console.log('click');
-  $('li').toggleClass('read');
-  event.preventDefault();
 };
 
 function deleteLink(event) {
