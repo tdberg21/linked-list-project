@@ -4,6 +4,7 @@ var $enterButton = $('.yellow-button');
 var $readButton = $('.read-button');
 var $deleteButton = $('.delete-button');
 var $cardContainer = $('.cardContainer');
+// var cardCount = 0;
 
 $enterButton.on('click', getInfo);
 $deleteButton.on('click', deleteLink);
@@ -13,14 +14,14 @@ $deleteButton.on('click', deleteLink);
 
 
 $('ul').on('click', 'li .read-button', function() {
-  console.log(this);
   $(this).toggleClass('read');
   $(this).closest('li').toggleClass('read-background');
 });
 
-// $('ul').on('click', 'li .delete-button', function() {
-  
-// })
+$('ul').on('click', 'li .delete-button', function() {
+  $(this).closest('li').remove();
+});
+
 
 
 function getInfo(event) {
