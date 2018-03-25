@@ -73,7 +73,7 @@ section {
 
 .parent {
   width: 50%;
-  height: 500px;
+  height: 800px;
   margin: auto;
   background-color: #455A64;
   display: inline-block;
@@ -112,18 +112,25 @@ section {
   color: #455A64
 }
 
-
 .delete-button {
   float: right;
 }
 
 .section2  {
   width: 50%;
+  height: 800px;
+  overflow: scroll;
   float: right;
   display: inline-block;
 }
 
 .card-container {
   list-style-type: none;
+  overflow: scroll;
+}
+
+.read {
+  color: #F05A28;
+  background-color: #F2F4F4;
 }
 
