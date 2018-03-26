@@ -4,23 +4,35 @@ var $enterButton = $('.yellow-button');
 var $readButton = $('.read-button');
 var $deleteButton = $('.delete-button');
 var $cardContainer = $('.cardContainer');
-// var $cardCount = 0;
+var $totalBookmarks = $('.card-count');
+var $cardCount = 0;
+var $readCountCatcher = $('.read-count');
+var $unreadCountCatcher = $('.unread-count');
 var $readCount = 0;
 var $unreadCount = 0;
 
 $enterButton.on('click', getInfo);
 $deleteButton.on('click', deleteLink);
-// $websiteTitle.on('keyup', enableButton);
-// $websiteUrl.on('keyup', enableButton);
+$websiteTitle.on('keyup', enableButton);
+$websiteUrl.on('keyup', enableButton);
 
 
 $('ul').on('click', 'li .read-button', function() {
-  $(this).toggleClass('read');
+  $(this).toggleClass('read unread-cards');
   $(this).closest('li').toggleClass('read-background');
+  var $readCount = $('.read').length;
+  $readCountCatcher.text('Read: ' + $readCount);
+  $unreadCountCatcher.text('Unread: ' + ($cardCount - $readCount));
+  console.log($('.unread-cards').length);
 });
 
 $('ul').on('click', 'li .delete-button', function() {
   $(this).closest('li').remove();
+  $cardCount--
+  var $readCount = $('.read').length;
+  $totalBookmarks.text('Total Bookmark= ' + $cardCount);
+  $unreadCountCatcher.text('Unread: ' + ($cardCount - $readCount));
+  $readCountCatcher.text('Read: ' + $readCount);
 });
 
 function getInfo(event) {
@@ -38,6 +50,9 @@ function prependCard(event) {
       <button class="readDeleteButtons read-button">Read</button>
       <button class="readDeleteButtons delete-button">Delete</button>
     </li>`);
+  $cardCount++
+  $totalBookmarks.text('Total Bookmark= ' + $cardCount);
+  $unreadCountCatcher.text('Unread: ' + ($cardCount - $('.read').length));
 };
 
 function deleteLink(event) {
@@ -59,6 +74,12 @@ function isValidUrl(url) {
     alert('please enter valid url');
   } else {
     prependCard();
+  };
+};
+
+function enableButton() {
+  if ($websiteTitle.val() || $websiteUrl.val()) {
+      $enterButton.prop('disabled', false);
   };
 };
 
