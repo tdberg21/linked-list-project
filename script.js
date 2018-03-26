@@ -4,13 +4,14 @@ var $enterButton = $('.yellow-button');
 var $readButton = $('.read-button');
 var $deleteButton = $('.delete-button');
 var $cardContainer = $('.cardContainer');
-// var cardCount = 0;
+// var $cardCount = 0;
+var $readCount = 0;
+var $unreadCount = 0;
 
 $enterButton.on('click', getInfo);
 $deleteButton.on('click', deleteLink);
 // $websiteTitle.on('keyup', enableButton);
 // $websiteUrl.on('keyup', enableButton);
-
 
 
 $('ul').on('click', 'li .read-button', function() {
@@ -22,8 +23,6 @@ $('ul').on('click', 'li .delete-button', function() {
   $(this).closest('li').remove();
 });
 
-
-
 function getInfo(event) {
   event.preventDefault();
   isFormComplete();
@@ -34,7 +33,7 @@ function prependCard(event) {
     <li class="cards">
       <h2>${$websiteTitle.val()}</h2>
       <hr>
-      <a target='_blank' href="${$websiteUrl.val()}">${$websiteUrl.val()}</a>
+      <a target='_blank' href="http://${$websiteUrl.val()}">${$websiteUrl.val()}</a>
       <hr>
       <button class="readDeleteButtons read-button">Read</button>
       <button class="readDeleteButtons delete-button">Delete</button>
