@@ -71,6 +71,17 @@ section {
   height: 500px;
 }
 
+article {
+  color: #455A64;
+  margin-left: 25%;
+  margin-top: 10px;
+  width: 41%;
+  border-style: solid;
+  border-color: #FFFFFF;
+  border-width: thin;
+  background-color: #CFD8DC;
+}
+
 .parent {
   width: 50%;
   height: 800px;
@@ -88,7 +99,18 @@ section {
   background-color: #FFC107;
   color: #FFFFFF;
   margin-left: 25%;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
+  width: 41%;
+  font-weight: 800;
+  border: 0;
+}
+
+#clear-button {
+  background-color: #FFC107;
+  color: #FFFFFF;
+  margin-left: 25%;
+  margin-top: 10px;
+  margin-bottom: 10px;
   width: 41%;
   font-weight: 800;
   border: 0;
@@ -139,8 +161,8 @@ section {
 
 .read-background {
   background-color: #F2F4F4;
-  opacity: .5;
-}
+/*  opacity: .5;
+*/}
 
 
 
