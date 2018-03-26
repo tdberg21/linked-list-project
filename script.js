@@ -34,7 +34,7 @@ function prependCard(event) {
     <li class="cards">
       <h2>${$websiteTitle.val()}</h2>
       <hr>
-      <a href="${$websiteUrl.val()}">${$websiteUrl.val()}</a>
+      <a target='_blank' href="${$websiteUrl.val()}">${$websiteUrl.val()}</a>
       <hr>
       <button class="readDeleteButtons read-button">Read</button>
       <button class="readDeleteButtons delete-button">Delete</button>
