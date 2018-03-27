@@ -15,7 +15,7 @@ $enterButton.on('click', getInfo);
 $deleteButton.on('click', deleteLink);
 $websiteTitle.on('keyup', enableButton);
 $websiteUrl.on('keyup', enableButton);
-
+$websiteTitle.focus();
 
 $('ul').on('click', 'li .read-button', function() {
   $(this).toggleClass('read unread-cards');
