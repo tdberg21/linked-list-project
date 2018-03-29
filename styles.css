@@ -118,6 +118,10 @@ input {
   width: 50%;
 }
 
+.yellow-button:disabled {
+  background-color: grey;
+}
+
 #clear-button {
   background-color: #FFC107;
   border: 0;
@@ -184,7 +188,7 @@ input {
   margin-top: 20px;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 600px) {
   .section2 {
     display: block;
     float: none;

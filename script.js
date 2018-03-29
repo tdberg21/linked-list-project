@@ -30,7 +30,7 @@ function deleteCard () {
   $(this).closest('li').remove();
   $cardCount--;
   var $readCount = $('.read').length;
-  $totalBookmarks.text('Total Bookmark= ' + $cardCount);
+  $totalBookmarks.text('Total Bookmark: ' + $cardCount);
   $unreadCountCatcher.text('Unread: ' + ($cardCount - $readCount));
   $readCountCatcher.text('Read: ' + $readCount);
 };
