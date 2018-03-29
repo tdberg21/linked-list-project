@@ -2,19 +2,27 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+body {  
+  margin: 0;
+}
+
 h1 {
-  display: inline-block;
   color: #FFFFFF;
+  display: inline-block;
+  font-size: 1.7em;
   font-weight: 800;
-  font-size: 3em;
   margin-bottom: 10px;
 }
 
 h2 {
-  margin-top: 10px;
+  color: #455A64;
   margin-bottom: 0;
   margin-left: 20px;
-  color: #455A64;
+  margin-top: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 80%;
 }
 
 a {
@@ -24,36 +32,35 @@ a {
 }
 
 a:hover {
+  color: #455A64;
   font-weight: 800;
   text-decoration-color: #FFC107;
-  color: #455A64
 }
 
 li {
   background-color: #FFFFFF;
+  border-color: #607D8B;
   border-style: solid;
   border-width: thin;
-  border-color: #607D8B;
-  width: 80%;
-  margin: auto;
-  margin-top: 20px;
   margin-bottom: 20px;
+  margin: auto;
+  width: 80%;
 }
 
 input {
-  margin-left: 25%;
-  margin-bottom: 20px;
-  width: 40%;
-  height: 20px;
   font-size: 18px;
+  height: 20px;
+  margin-bottom: 20px;
+  margin-left: 25%;
+  width: 50%;
 }
 
  img {
   display: inline-block;
-  width: 50px;
   height: 25px;
   margin-left: 5px;
   margin-right: 5px;
+  width: 50px;
  }
 
 main {
@@ -61,9 +68,9 @@ main {
 }
 
 hr {
-  width: 93%;
   border-color: #CFD8DC;
   margin-bottom: 5px;
+  width: 93%;
 }
 
 section {
@@ -72,48 +79,54 @@ section {
 }
 
 article {
+  background-color: #CFD8DC;
   color: #455A64;
   margin-left: 25%;
   margin-top: 10px;
-  width: 41%;
-  border-style: solid;
-  border-color: #FFFFFF;
-  border-width: thin;
-  background-color: #CFD8DC;
+  width: 50%;
+}
+
+input {
+  border: none;
 }
 
 .parent {
-  width: 50%;
-  height: 800px;
-  margin: auto;
   background-color: #455A64;
   display: inline-block;
   float: left;
+  height: 100vh;
+  margin: auto;
+  width: 50%;
+}
+
+.title-container {
+  margin: 0 auto;
 }
 
 .linked {
-  margin-left: 23%;
+  margin-left: 25%;
 }
 
 .yellow-button {
   background-color: #FFC107;
-  color: #FFFFFF;
-  margin-left: 25%;
-  margin-bottom: 10px;
-  width: 41%;
-  font-weight: 800;
   border: 0;
+  color: #FFFFFF;
+  font-weight: 800;
+  height: 25px;
+  margin-bottom: 10px;
+  margin-left: 25%;
+  width: 50%;
 }
 
 #clear-button {
   background-color: #FFC107;
+  border: 0;
   color: #FFFFFF;
+  font-weight: 800;
+  margin-bottom: 10px;
   margin-left: 25%;
   margin-top: 10px;
-  margin-bottom: 10px;
-  width: 41%;
-  font-weight: 800;
-  border: 0;
+  width: 50%;
 }
 
 .yellow-button:hover {
@@ -132,22 +145,22 @@ article {
 }
 
 .readDeleteButtons:hover {
+  color: #455A64;
   font-weight: 800;
   text-decoration-color: #FFC107;
-  color: #455A64
 }
 
 .delete-button {
-  float: right;
   color: #455A64;
+  float: right;
 }
 
 .section2  {
-  width: 50%;
-  height: 800px;
-  overflow: scroll;
-  float: right;
   display: inline-block;
+  float: right;
+  height: 100vh;
+  overflow: scroll;
+  width: 50%;
 }
 
 .card-container {
@@ -161,8 +174,34 @@ article {
 
 .read-background {
   background-color: #F2F4F4;
-/*  opacity: .5;
-*/}
+}
 
+.cards {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 80%;
+  margin-top: 20px;
+}
 
+@media screen and (max-width: 550px) {
+  .section2 {
+    display: block;
+    float: none;
+    height: 50%;
+    width: 100%;
+  }
 
+  .parent {
+    display: block;
+    float: none;
+    height: 50%;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  h1 {
+    font-size: 2.5em;
+    margin-left: 15px;
+  }
