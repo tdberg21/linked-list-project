@@ -118,6 +118,10 @@ input {
   width: 50%;
 }
 
+.yellow-button:disabled {
+  background-color: grey;
+}
+
 #clear-button {
   background-color: #FFC107;
   border: 0;
